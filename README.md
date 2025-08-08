@@ -1,6 +1,6 @@
 # 🚦 Traffic-Informed Symbolic Regression (TI-SR)
 
-This repository implements **Traffic-Informed Symbolic Regression (TI-SR)**, a method that incorporates traffic-related metrics into symbolic regression to improve model interpretability and performance.  
+This repository implements **Traffic-Informed Symbolic Regression (TI-SR)**, a traffic informed symbolic regression approach to improve model interpretability and performance.  
 
 ---
 
