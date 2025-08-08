@@ -12,7 +12,7 @@ Before running the code, make sure the following are installed:
 - **MATLAB** – For traffic scenario and metric generation  
 - **Julia** – Required by PySR  
 
-> **Note:** Replace the `population.jl` file in your PySR installation with the **customized `population.jl`** provided in this repository.
+> **Note:** Replace the `SymbolicRegression.jl/src/population.jl` file in your PySR installation with the **customized `population.jl`** provided in this repository.
 
 ---
 
