@@ -30,28 +30,26 @@ Before running the code, make sure the following are installed:
 ## 🔄 Workflow
 ### **1️⃣ Apply Customized Settings for PySR**  
 After installing PySR, replace the file:  
--SymbolicRegression.jl/src/population.jl with the customized `population.jl` provided in: TI-SR/TI-SR-Code/.
--Additional setup may be required for `SymbolicRegression.jl`. Detailed installation instructions are available in the [PySR backend documentation](https://ai.damtp.cam.ac.uk/pysr/backend/).
+SymbolicRegression.jl/src/population.jl with the customized `population.jl` provided in: TI-SR/TI-SR-Code/.
+Additional setup may be required for `SymbolicRegression.jl`. Detailed installation instructions are available in the [PySR backend documentation](https://ai.damtp.cam.ac.uk/pysr/backend/).
 
 ### **2️⃣ Generate Driving Scenarios and Metrics (MATLAB)**  
--Run: TI-SR/TI-SR-Code/GenerateCRMatrixIDM1-4.m.
--This script generates the driving scenario library and computes traffic-related metrics.
+Run: TI-SR/TI-SR-Code/GenerateCRMatrixIDM1-4.m.
+This script generates the driving scenario library and computes traffic-related metrics.
 
 ### **3️⃣ Implement TI-SR (Python)**  
--Run: TI-SR/TI-SR-Code/SymbolicRegressionCode.py.
--This script runs the Traffic-Informed Symbolic Regression process.
+Run: TI-SR/TI-SR-Code/SymbolicRegressionCode.py.
+This script runs the Traffic-Informed Symbolic Regression process.
 
 ### **4️⃣ Perform Result Analysis**  
 1. **Generate Predicted Trajectories & Trajectory-Level Evaluation**  
--Run:  TI-SR/TI-SR-Code/ResultAnalysis/GeneratePySRTestTrajectory.py.
--This produces predicted trajectories using TI-SR, performs trajectory-level evaluation, and prepares inputs for traffic-level evaluation.  
+Run:  TI-SR/TI-SR-Code/ResultAnalysis/GeneratePySRTestTrajectory.py.
+This produces predicted trajectories using TI-SR, performs trajectory-level evaluation, and prepares inputs for traffic-level evaluation.  
 2. **Traffic-Level Evaluation**  
--Run:  TI-SR/TI-SR-Code/ResultAnalysis/PySRResultAnalysis.m.
--This script calculates traffic-level evaluation metrics.
+Run:  TI-SR/TI-SR-Code/ResultAnalysis/PySRResultAnalysis.m.
+This script calculates traffic-level evaluation metrics.
 
 ## ⚠️ Important Notes
 - Ensure MATLAB and Python can exchange data (e.g., via `.csv` or `.mat` files).  
 - PySR requires Julia to be properly installed and accessible from Python.  
 - The provided `population.jl` **must replace** the default PySR version to enable the customized evolutionary process.  
-
-
