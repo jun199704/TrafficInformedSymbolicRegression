@@ -34,7 +34,7 @@ Additional setup may be required for `SymbolicRegression.jl`. Detailed installat
 
 ### **2️⃣ Generate Driving Scenarios and Metrics (MATLAB)**  
 Run: TI-SR/TI-SR-Code/GenerateCRMatrixIDM1-4.m.
-This script generates the driving scenario library and computes traffic-related metrics when received data from TI-SR.
+This script generates the driving scenario library and computes traffic-related metrics when receiving data from TI-SR.
 
 ### **3️⃣ Implement TI-SR (Python)**  
 Run: TI-SR/TI-SR-Code/SymbolicRegressionCode.py.
