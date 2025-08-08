@@ -20,9 +20,9 @@ Before running the code, make sure the following are installed:
 
 | File | Description |
 |------|-------------|
-| **`GenerateCRMatrixIDM1-4.m`** | MATLAB script to generate driving scenarios and compute traffic-related metrics. **Run this first** before running `SymbolicRegressionCode.py`. |
-| **`SymbolicRegressionCode.py`** | Python script to execute the Traffic-Informed Symbolic Regression (TI-SR) using PySR. This code will load the dataset and random split it for training and testing. |
-| **`GeneratePySRTestTrajectory.py`** | Python script to compute trajectory-related metrics for testing scenarios. |
-| **`PySRResultAnalysis.m`** | MATLAB script to analyze TI-SR results and calculate additional traffic-related metrics. |
+| **`GenerateCR/GenerateCRMatrixIDM1-4.m`** | MATLAB script to generate driving scenarios and compute traffic-related metrics. **Run this first** before running `SymbolicRegressionCode.py`. |
+| **`TISR/SymbolicRegressionCode.py`** | Python script to execute the Traffic-Informed Symbolic Regression (TI-SR) using PySR. This code will load the dataset and random split it for training and testing. |
+| **`TISR/GeneratePySRTestTrajectory.py`** | Python script to compute trajectory-related metrics for testing scenarios. |
+| **`TISR/PySRResultAnalysis.m`** | MATLAB script to analyze TI-SR results and calculate additional traffic-related metrics. |
 
 
