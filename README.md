@@ -29,7 +29,7 @@ Before running the code, make sure the following are installed:
 
 ## 🔄 Workflow
 
-### **1️⃣ Apply Customized setting for PySR**  
+### **1️ Apply Customized setting for PySR**  
 After installing the PySR, replace the 'SymbolicRegression.jl/src/population.jl' file with the customized 'population.jl' provided in the folder TI-SR/TI-SR-Code. Additional Installation may be needed for 'SymbolicRegression.jl', details instruction can be found in https://ai.damtp.cam.ac.uk/pysr/backend/.
 
 ### **2 Build the connection for matlab**  
