@@ -85,65 +85,7 @@ filename = "/home/drivesim/Documents/SR/SymbolicRegression.jl/src/vehTrajsTestNC
 with open(filename, 'r') as f:
     vehTrajsAtk = json.load(f)
 
-#model = PySRRegressor.from_file("/home/perception/Jun/MODELINGATTACKTRAJECTORY/PySRModel_CR_HD/hall_of_fame_2024-09-18_162441.532.pkl") #with CR and HD matrix
-#model = PySRRegressor.from_file("/home/perception/Jun/MODELINGATTACKTRAJECTORY/PySRModel_CR_HD/hall_of_fame_2024-09-19_171846.146.pkl") #with CR and HD matrix
-#model = PySRRegressor.from_file("/home/perception/Jun/MODELINGATTACKTRAJECTORY/PySRModel_CR_HD/hall_of_fame_2024-09-23_152239.617.pkl") #with CR matrix deterministic test random seed 77
 
-#model = PySRRegressor.from_file("/home/perception/Jun/MODELINGATTACKTRAJECTORY/PySRModel_CR_HD/hall_of_fame_2024-09-24_221245.978.pkl") #no CR matrix deterministic random seed 77
-#model = PySRRegressor.from_file("/home/perception/Jun/MODELINGATTACKTRAJECTORY/PySRModel_CR_HD/hall_of_fame_2024-09-30_135903.621.pkl")  #CR and lane departure time deterministic test
-
-#model = PySRRegressor.from_file("/home/perception/Jun/MODELINGATTACKTRAJECTORY/PySRModel_CR_HD/hall_of_fame_2024-10-01_165548.428.pkl") #PySR with CR and complexity
-#print(model)
-#model = PySRRegressor.from_file("/home/perception/Jun/MODELINGATTACKTRAJECTORY/PySRModel_CR_HD/hall_of_fame_2024-10-03_133521.853.pkl") #PySR , complexity
-#print(model)
-
-#model = PySRRegressor.from_file("/home/perception/Jun/MODELINGATTACKTRAJECTORY/PySRModel_CR_HD/hall_of_fame_2024-10-09_104417.493.pkl") #PySR  CR complexity parsimony 0.001
-#model = PySRRegressor.from_file("/home/perception/Jun/MODELINGATTACKTRAJECTORY/PySRModel_CR_HD/hall_of_fame_2024-10-10_113446.256.pkl") #PySR without CR parsimony 0.001 best
-#model = PySRRegressor.from_file("/home/perception/Jun/MODELINGATTACKTRAJECTORY/PySRModel_CR_HD/hall_of_fame_2024-10-10_150147.406.pkl") #PySR without CR accuracy
-
-#model = PySRRegressor.from_file("/home/perception/Jun/MODELINGATTACKTRAJECTORY/PySRModel_CR_HD/hall_of_fame_2024-10-16_155419.948.pkl") #1000 iteration 20 max complexity 
-#model = PySRRegressor.from_file("/home/perception/Jun/MODELINGATTACKTRAJECTORY/PySRModel_CR_HD/hall_of_fame_2024-10-20_165921.916.pkl") #500 iteration 20 max complexity traffic informed in the last 100 iteration
-
-#model = PySRRegressor.from_file("/home/perception/Jun/MODELINGATTACKTRAJECTORY/PySRModel_CR_HD/hall_of_fame_2024-10-22_101758.313.pkl") #500 iteration 20 max complexity
-#model = PySRRegressor.from_file("/home/perception/Jun/MODELINGATTACKTRAJECTORY/PySRModel_CR_HD/hall_of_fame_2024-10-22_143606.261.pkl") #200 iteration 20 max complexity with CR
-#model = PySRRegressor.from_file("/home/perception/Jun/MODELINGATTACKTRAJECTORY/PySRModel_CR_HD/hall_of_fame_2024-10-25_194004.729.pkl") #200 iteration 20 max complexity
-
-# above model use random seed 77
-#model = PySRRegressor.from_file("/home/perception/Jun/MODELINGATTACKTRAJECTORY/PySRModel_CR_HD/hall_of_fame_2024-10-25_214635.813.pkl") # 100 iteration 30 max complexity, traffic informed random seed 66
-#model = PySRRegressor.from_file("/home/perception/Jun/MODELINGATTACKTRAJECTORY/PySRModel_CR_HD/hall_of_fame_2024-10-28_141854.157.pkl") # 200 iteration 35 max complexity, traffic informed, random seed 11, bilevel selection 
-#model = PySRRegressor.from_file("/home/perception/Jun/MODELINGATTACKTRAJECTORY/PySRModel_CR_HD/hall_of_fame_2024-10-29_141522.378.pkl") #200 iteration 35 max complexity, without traffic informed, random seed 11
-
-#model = PySRRegressor.from_file("/home/perception/Jun/MODELINGATTACKTRAJECTORY/PySRModel_CR_HD/hall_of_fame_2024-10-30_123057.307.pkl") # 500 iteration 35 max complexity, without traffic informed, random seed 11
-#model = PySRRegressor.from_file("/home/perception/Jun/MODELINGATTACKTRAJECTORY/PySRModel_CR_HD/hall_of_fame_2024-11-03_103125.375.pkl")  # 200 iteration 35 max complexity, no traffic informed, weight 100 for last item, random seed 11
-
-#model = PySRRegressor.from_file("/home/perception/Jun/MODELINGATTACKTRAJECTORY/PySRModel_CR_HD/hall_of_fame_2024-11-03_105808.629.pkl") # 200 iteration 35 max complexity, no traffic informed, weight 1000 for last item, random seed 11
-#model = PySRRegressor.from_file("/home/perception/Jun/MODELINGATTACKTRAJECTORY/PySRModel_CR_HD/hall_of_fame_2024-11-03_113909.486.pkl") # 200 iteration 35 max complexity. traffic informed,weight 1000 for last item, random seed 11
-
-#model = PySRRegressor.from_file("/home/perception/Jun/MODELINGATTACKTRAJECTORY/PySRModel_CR_HD/hall_of_fame_2024-11-07_144658.974.pkl") #500 iteration 35 max complexity, traffic informed, random seed 77
-#model = PySRRegressor.from_file("/home/perception/Jun/MODELINGATTACKTRAJECTORY/PySRModel_CR_HD/hall_of_fame_2024-11-10_222616.727.pkl") # 500 iteration 35 max complexity, no traffic informed, random seed 77
-
-#model = PySRRegressor.from_file("/home/perception/Jun/MODELINGATTACKTRAJECTORY/PySRModel_CR_HD/hall_of_fame_2024-11-16_215009.783.pkl") #200 iteration, 35 max complexity, traffic informed, random seed 77, include sin
-#model = PySRRegressor.from_file("/home/perception/Jun/MODELINGATTACKTRAJECTORY/PySRModel_CR_HD/hall_of_fame_2024-11-19_105510.909.pkl") # 200 iteration, 35 max complexity, no traffic informed
-#model = PySRRegressor.from_file("/home/perception/Jun/MODELINGATTACKTRAJECTORY/PySRModel_CR_HD/hall_of_fame_2024-11-20_002554.719.pkl") # 100 iteration, 35 max complexity, traffic informed, random seed 77, include sin, 500 population size
-
-#model = PySRRegressor.from_file("/home/perception/Jun/MODELINGATTACKTRAJECTORY/PySRModel_CR_HD/hall_of_fame_2024-11-19_142542.622.pkl") #200 iteration, 35 max complexity, no traffic informed, random seed 77, 500 population
-
-#model = PySRRegressor.from_file(run_directory="/home/drivesim/Documents/SR/SymbolicRegression.jl/src/outputs/20250118_203801_DqDZtF/") # 100 iteration, 35 max complexity, traffic informed, fix function form
-#model = PySRRegressor.from_file(run_directory="/home/drivesim/Documents/SR/SymbolicRegression.jl/src/outputs/20250120_144437_eNjK7p/") 
-
-#new results with function form y=f(x)*e^g(x)+h(x)
-#model = PySRRegressor.from_file(run_directory="/home/drivesim/Documents/SR/SymbolicRegression.jl/src/outputs/20250121_205220_2RVPrC/")  #100 iteration, 35 max complexity, traffic informed, f(x)*e^g(x)+h(x), random state 77, best result
-#model = PySRRegressor.from_file(run_directory="/home/drivesim/Documents/SR/SymbolicRegression.jl/src/outputs/20250122_161443_IaCnvT/") #100 iteration, 35 max complexity, no traffic informed, f(x)*e^g(x)+h(x), random state 77
-#model = PySRRegressor.from_file(run_directory="/home/drivesim/Documents/SR/SymbolicRegression.jl/src/outputs/20250127_133447_dv9qKI/") #100 iteration, 35 max complexity, traffic informed, random seed 55
-#model = PySRRegressor.from_file(run_directory="/home/drivesim/Documents/SR/SymbolicRegression.jl/src/outputs/20250128_100359_lvcKtc/")  #100 iteration, 35 max complexity, no traffic informed, random seed 55
-#model = PySRRegressor.from_file(run_directory="/home/drivesim/Documents/SR/SymbolicRegression.jl/src/outputs/20250125_204456_SpNHVp/") #100 iteration, 35 max complexity, no traffic informed, random seed 66
-#model = PySRRegressor.from_file(run_directory="/home/drivesim/Documents/SR/SymbolicRegression.jl/src/outputs/20250128_130256_AOXD4h/") #100 iteration, 35 max complexity, traffic informed, random seed 66
-#model = PySRRegressor.from_file(run_directory="/home/drivesim/Documents/SR/SymbolicRegression.jl/src/outputs/20250129_143716_pTuxNI/") #no traffic informed, random seed 11
-#model = PySRRegressor.from_file(run_directory="/home/drivesim/Documents/SR/SymbolicRegression.jl/src/outputs/20250131_001758_xsZxVx/") #no traffic informed, random seed 11, not using KA06
-#model = PySRRegressor.from_file(run_directory="/home/drivesim/Documents/SR/SymbolicRegression.jl/src/outputs/20250130_225851_vAPVDL/") # no traffic informed, not using KA37
-#model = PySRRegressor.from_file(run_directory="/home/drivesim/Documents/SR/SymbolicRegression.jl/src/outputs/20250131_103755_BbsX63/") # no traffic informed, not using KA36_1
-#
-#model = PySRRegressor.from_file(run_directory="/home/drivesim/Documents/SR/SymbolicRegression.jl/src/outputs/20250207_001037_zTEvvb/") # traffic informed, not using KA06, random seed 00
 model = PySRRegressor.from_file(run_directory="/home/drivesim/Documents/SR/SymbolicRegression.jl/src/outputs/20250210_151622_WouM8q/") # traffic informed, random seed 00, 200 population, 
 #model = PySRRegressor.from_file(run_directory="/home/drivesim/Documents/SR/SymbolicRegression.jl/src/outputs/20250217_135536_qIf3t2/") #no traffic informed, random seed 00, 200 population
 
@@ -257,7 +199,7 @@ best_loss_index = hof_models["loss"].idxmin()
 
 meanMseList=[]
 print(len(hof_models))
-for i in range(14,15):
+for i in range(14,15):  #replace for any frame in the complexity list
     best_loss_index = i
     complexity = hof_models["complexity"][i]
 
