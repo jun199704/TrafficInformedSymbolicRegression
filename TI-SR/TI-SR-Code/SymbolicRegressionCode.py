@@ -402,13 +402,20 @@ mseList=calculate_testing_loss(vehTrajsTest)
 meanMse=np.mean(mseList)  
 print(meanMse)
 
-#test on HighD dataset
-#for vehID in vehTrajsTestHighD.keys():
-    
-#filename='HighDTrajsAtk'+'.json' 
-#with open(filename,'w+') as f:
-#    json.dump(vehTrajsHighD,f)
-    
 
+'''
+for vehID in vehTrajsTest.keys():
+    plt.figure()
+    xpoints=range(len(vehTrajsTest[vehID]['y_pred']))
+    ypoints=vehTrajsTest[vehID]['y_pred']
+    plt.plot(xpoints,ypoints,color='green',label='predict curve')
+    ypoints=vehTrajsTest[vehID]['latdev']
+    plt.plot(xpoints,ypoints,color='red',label='original curve')
+    plt.xlabel('simulation time (0.1s)')
+    plt.ylabel('lateral deviation (m)')
+    plt.title(vehTrajsTest[vehID]['DatasetID']+': '+str(vehID))
+    plt.legend()
+    plt.show()
+'''   
           
 
