@@ -384,80 +384,8 @@ for vehID in vehTrajsTest.keys():
                 y_pred=model.predict(X_test)
                 vehTrajsTest[vehID]['y_pred'].append(y_pred[0])
 
-'''
-
-for vehID in vehTrajsTest.keys():
-    vehTrajsTest[vehID]['y_pred']=[]
-    if len(vehTrajsTest[vehID]['featureList'])!=0:
-        x_test=np.zeros((len(vehTrajsTest[vehID]['featureList']),len(vehTrajsTest[vehID]['featureList'][0])))
-        for i in range(len(vehTrajsTest[vehID]['featureList'])):
-            for j in range(len(vehTrajsTest[vehID]['featureList'][0])):
-                x_test[i,j]=vehTrajsTest[vehID]['featureList'][i][j]
-        y_pred = model.predict(x_test)
-        y_pred_fix = model_opt(y_pred, a, b)
-        vehTrajsTest[vehID]['y_pred']=list(y_pred_fix)
-'''
 
 
-
-'''()
-for vehID in vehTrajsTest.keys():
-    plt.figure()
-    xpoints=range(len(vehTrajsTest[vehID]['y_pred']))
-    ypoints=vehTrajsTest[vehID]['y_pred']
-    plt.plot(xpoints,ypoints,color='green',label='predict curve')
-    ypoints=vehTrajsTest[vehID]['latdev']
-    plt.plot(xpoints,ypoints,color='red',label='original curve')
-    plt.xlabel('simulation time (0.1s)')
-    plt.ylabel('lateral deviation (m)')
-    plt.title(vehTrajsTest[vehID]['DatasetID']+': '+str(vehID))
-    plt.legend()
-    plt.show()
-'''    
-#generate lateral deviation pattern for highD
-'''
-filename='HighDTrajs.json'
-with open(filename,'r') as f:
-    vehTrajsHighD=json.load(f)
-    
-unique_rows=[[0.3,1.2],[0.3,1.3],[1.1,1.5]]
-    
-
-for vehID in vehTrajsHighD.keys():
-    vehTrajsHighD[vehID]['y_pred']=[]
-    x_test=np.zeros((len(vehTrajsHighD[vehID]['featureList'])-len(vehTrajsHighD[vehID]['firstPhaseLatDev']),len(vehTrajsHighD[vehID]['featureList'][0])+2))
-    atkParamsIdx=random.uniform(0,1)
-    if atkParamsIdx<=0.22:
-        atkParams=[0.3,1.2]
-    if atkParamsIdx>=0.63:
-        atkParams=[1.1,1.5]
-    if atkParamsIdx>0.22 and atkParamsIdx<0.63:
-        atkParams=[0.3,1.3]
-    k=0
-    for i in range(len(vehTrajsHighD[vehID]['firstPhaseLatDev']),len(vehTrajsHighD[vehID]['featureList'])):
-        for j in range(len(vehTrajsHighD[vehID]['featureList'][0])):
-            x_test[k,j]=vehTrajsHighD[vehID]['featureList'][i][j]
-        x_test[k,len(vehTrajsHighD[vehID]['featureList'][0])]=atkParams[0]
-        x_test[k,len(vehTrajsHighD[vehID]['featureList'][0])+1]=atkParams[1]
-        k+=1
-    y_pred=model.predict(x_test)
-    vehTrajsHighD[vehID]['y_pred']=list(y_pred)
-
-
-  
-for vehID in vehTrajsHighD.keys():
-    plt.figure()
-    xpoints=range(len(vehTrajsHighD[vehID]['y_pred']))
-    ypoints=vehTrajsHighD[vehID]['y_pred']
-    plt.plot(xpoints,ypoints,color='green',label='predict curve')
-    plt.xlabel('simulation time (0.1s)')
-    plt.ylabel('lateral deviation (m)')
-    #plt.title(vehID)
-    plt.legend()
-    figname='HighD'+str(vehID)+'.png'
-    #plt.savefig(figname)
-    plt.show()           
-''' 
 
 def calculate_testing_loss(vehTrajs):
     mseList=[]
